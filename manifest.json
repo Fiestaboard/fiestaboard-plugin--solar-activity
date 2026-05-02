@@ -1,0 +1,69 @@
+{
+  "id": "solar_activity",
+  "name": "Solar Activity",
+  "version": "0.1.0",
+  "description": "Display current sunspot count and solar flare activity from NOAA SWPC.",
+  "author": "FiestaBoard Team",
+  "icon": "sun",
+  "category": "data",
+  "repository": "https://github.com/Fiestaboard/fiestaboard-plugin--solar-activity",
+  "documentation": "README.md",
+  "min_refresh_seconds": 3600,
+  "settings_schema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "title": "Enabled",
+        "default": false
+      },
+      "refresh_seconds": {
+        "type": "integer",
+        "title": "Refresh Interval (seconds)",
+        "description": "How often to fetch solar activity data.",
+        "default": 3600,
+        "minimum": 1800
+      }
+    },
+    "required": []
+  },
+  "variables": {
+    "groups": {
+      "solar": {
+        "label": "Solar Data"
+      }
+    },
+    "simple": {
+      "sunspot_count": {
+        "description": "Number of active sunspot regions",
+        "type": "integer",
+        "max_length": 4,
+        "group": "solar",
+        "example": "7"
+      },
+      "flare_class": {
+        "description": "Largest solar flare class today (A/B/C/M/X)",
+        "type": "string",
+        "max_length": 5,
+        "group": "solar",
+        "example": "M1.2"
+      },
+      "activity_level": {
+        "description": "Human-readable activity level",
+        "type": "string",
+        "max_length": 10,
+        "group": "solar",
+        "example": "Moderate"
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "src": "docs/board-display.png",
+      "alt": "Solar Activity displayed on a Vestaboard",
+      "caption": "Example board output using the default template",
+      "primary": true
+    }
+  ],
+  "api_docs": "https://www.swpc.noaa.gov/products/solar-region-summary"
+}
