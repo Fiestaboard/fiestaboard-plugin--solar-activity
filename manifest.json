@@ -1,7 +1,7 @@
 {
   "id": "solar_activity",
   "name": "Solar Activity",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Display current sunspot count and solar flare activity from NOAA SWPC.",
   "author": "FiestaBoard Team",
   "icon": "sun",
