@@ -1,7 +1,7 @@
 {
   "id": "solar_activity",
   "name": "Solar Activity",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Display current sunspot count and solar flare activity from NOAA SWPC.",
   "author": "FiestaBoard Team",
   "icon": "sun",
@@ -67,45 +67,68 @@
   ],
   "api_docs": "https://www.swpc.noaa.gov/products/solar-region-summary",
   "demo": {
-    "name": "Solar Activity Demo",
-    "device_type": "flagship",
-    "config": {
-      "enabled": true,
-      "refresh_seconds": 3600
+    "flagship": {
+      "name": "Solar Activity Demo",
+      "config": {
+        "enabled": true,
+        "refresh_seconds": 3600
+      },
+      "template": [
+        "Solar Activity",
+        "",
+        "Sunspots: {{solar_activity.sunspot_count}}",
+        "Flare:    {{solar_activity.flare_class}}",
+        "Activity: {{solar_activity.activity_level}}",
+        ""
+      ],
+      "line_metadata": [
+        {
+          "alignment": "center",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        }
+      ]
     },
-    "template": [
-      "Solar Activity",
-      "",
-      "Sunspots: {{solar_activity.sunspot_count}}",
-      "Flare:    {{solar_activity.flare_class}}",
-      "Activity: {{solar_activity.activity_level}}",
-      ""
-    ],
-    "line_metadata": [
-      {
-        "alignment": "center",
-        "wrap": false
-      },
-      {
-        "alignment": "left",
-        "wrap": false
-      },
-      {
-        "alignment": "left",
-        "wrap": false
-      },
-      {
-        "alignment": "left",
-        "wrap": false
-      },
-      {
-        "alignment": "left",
-        "wrap": false
-      },
-      {
-        "alignment": "left",
-        "wrap": false
-      }
-    ]
+    "note": {
+      "name": "Solar Activity (Note)",
+      "template": [
+        "SOLAR ACTIVITY",
+        "{{solar_activity.sunspot_count}} SUNSPOTS",
+        "{{solar_activity.activity_level}}"
+      ],
+      "line_metadata": [
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        },
+        {
+          "alignment": "left",
+          "wrap": false
+        }
+      ]
+    }
   }
 }
