@@ -65,6 +65,27 @@
       "primary": true
     }
   ],
+  "teaser": "7 SUNSPOTS",
+  "previews": [
+    {
+      "device_type": "flagship",
+      "rows": [
+        "    Solar Activity",
+        "",
+        "Sunspots: 7",
+        "Flare:    M1.2",
+        "Activity: Moderate"
+      ]
+    },
+    {
+      "device_type": "note",
+      "rows": [
+        "SOLAR ACTIVITY",
+        "7 SUNSPOTS",
+        "Moderate"
+      ]
+    }
+  ],
   "api_docs": "https://www.swpc.noaa.gov/products/solar-region-summary",
   "demo": {
     "flagship": {
